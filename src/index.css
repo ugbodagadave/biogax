@@ -81,6 +81,23 @@
     --border: oklch(0.922 0 0);
     --input: oklch(0.922 0 0);
     --ring: #c0ff75;
+
+    /* Sticky card spacing - responsive */
+    --sticky-card-spacing: 60px;
+}
+
+/* Tablet: smaller fixed spacing */
+@media (min-width: 768px) {
+    :root {
+        --sticky-card-spacing: 80px;
+    }
+}
+
+/* Desktop: proportional spacing */
+@media (min-width: 1024px) {
+    :root {
+        --sticky-card-spacing: 20vh;
+    }
 }
 
 .dark {
@@ -182,15 +199,12 @@
 /* ============================================
    NAVBAR STYLES
    ============================================ */
-/* Styles moved to internal Tailwind classes */
 
 
 /* ============================================
    HERO SECTION STYLES
    ============================================ */
-/* Styles moved to internal Tailwind classes */
 
 /* ============================================
    WHAT WE DO SECTION
    ============================================ */
-/* Styles moved to internal Tailwind classes */

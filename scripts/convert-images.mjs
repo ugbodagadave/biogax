@@ -3,16 +3,16 @@ import { unlink } from 'fs/promises';
 
 const conversions = [
     {
-        input: 'representation-ecology-sustainability (1).jpg',
-        output: 'public/what-we-do-1.webp'
+        input: 'meric-tuna-fNlp-8iqSN8-unsplash.jpg',
+        output: 'public/services-1.webp'
     },
     {
-        input: 'zoe-richardson-siD6uufCyt8-unsplash.jpg',
-        output: 'public/what-we-do-2.webp'
+        input: 'close-up-metallic-wine-barrels-winery.jpg',
+        output: 'public/services-2.webp'
     },
     {
-        input: 'jonas-koel-nnxWQZTmoxQ-unsplash.jpg',
-        output: 'public/what-we-do-3.webp'
+        input: 'selective-focus-shot-person-wearing-gloves-holding-shredded-rubber-tires.jpg',
+        output: 'public/services-3.webp'
     }
 ];
 

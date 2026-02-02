@@ -35,8 +35,8 @@ const stickyCards = [
 
 export function WhatWeDo() {
     return (
-        <section className="bg-white py-16 md:py-24 px-4 md:px-8" id="what-we-do">
-            {/* Text Content Area */}
+        <section className="bg-white pt-16 md:pt-24 pb-8 md:pb-12 px-4 md:px-8" id="what-we-do">
+            {/* Text Content */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 max-w-[1400px] mx-auto mb-12 md:mb-16">
                 {/* Left Column */}
                 <div className="flex flex-col items-start">
@@ -97,8 +97,12 @@ export function WhatWeDo() {
                     {stickyCards.map((card, index) => (
                         <div
                             key={card.title}
-                            className="sticky top-4 md:top-8 w-full h-[calc(60vh-1.5rem)] md:h-[calc(70vh-2rem)] lg:h-[calc(100vh-4rem)] rounded-none overflow-hidden shadow-[0_-4px_24px_rgba(0,0,0,0.15)] first:shadow-none"
-                            style={{ zIndex: index + 1 }}
+                            className="sticky w-full h-[350px] md:h-[500px] lg:h-[600px] rounded-none overflow-hidden shadow-[0_-4px_24px_rgba(0,0,0,0.15)] first:shadow-none"
+                            style={{
+                                top: `${16 + index * 20}px`,
+                                zIndex: index + 1,
+                                marginBottom: index < stickyCards.length - 1 ? 'var(--sticky-card-spacing)' : '0'
+                            }}
                         >
                             <img
                                 src={card.image}

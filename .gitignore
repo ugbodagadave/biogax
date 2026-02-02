@@ -30,3 +30,6 @@ dist-ssr
 
 # Convex
 .convex
+.agent\skills\skills.json
+.agent\skills
+.agent/

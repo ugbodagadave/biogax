@@ -59,7 +59,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0], index: n
             className={`flex flex-col lg:flex-row gap-6 lg:gap-8 items-stretch py-[calc(var(--spacing-list-gap-mobile)/2)] md:py-[calc(var(--spacing-list-gap-desktop)/3)] ${index !== 0 ? 'border-t border-gray-100 dark:border-white/5' : ''}`}
         >
             {/* Image */}
-            <div className="w-full lg:w-1/2 overflow-hidden bg-gray-100 dark:bg-white/5 relative aspect-square lg:aspect-auto">
+            <div className="w-full lg:flex-1 overflow-hidden bg-gray-100 dark:bg-white/5 relative aspect-square lg:aspect-auto rounded-[4px]">
                 <img
                     src={project.image}
                     alt={project.title}
@@ -69,7 +69,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0], index: n
             </div>
 
             {/* Details */}
-            <div className="w-full lg:w-1/2 flex flex-col justify-center py-1">
+            <div className="w-full lg:w-[500px] xl:w-[550px] flex-none flex flex-col justify-center py-1">
                 <h3 className="font-heading text-3xl md:text-4xl font-medium text-[#1a1a1a] dark:text-white mb-3 md:mb-4 leading-tight">
                     {project.title}
                 </h3>
@@ -137,8 +137,8 @@ function ProjectCard({ project, index }: { project: typeof projects[0], index: n
 
 export function Projects() {
     return (
-        <section className="pt-[var(--spacing-section-pt-mobile)] md:pt-[var(--spacing-section-pt-desktop)] pb-[var(--spacing-section-pb-mobile)] md:pb-[var(--spacing-section-pb-desktop)] px-6 bg-white dark:bg-[#1a1a1a]">
-            <div className="max-w-[1200px] mx-auto px-0 md:px-6">
+        <section className="pt-[var(--spacing-section-pt-mobile)] md:pt-[var(--spacing-section-pt-desktop)] pb-[var(--spacing-section-pb-mobile)] md:pb-[var(--spacing-section-pb-desktop)] px-4 md:px-8 bg-white dark:bg-[#1a1a1a]">
+            <div className="max-w-[1400px] mx-auto">
                 {/* Header */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-[var(--spacing-header-mb-mobile)] md:mb-[var(--spacing-header-mb-desktop)]">
                     <div className="max-w-[700px]">

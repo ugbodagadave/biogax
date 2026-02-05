@@ -6,6 +6,7 @@ import { Services } from './components/Services';
 import { ImplementationProcess } from './components/ImplementationProcess';
 import { Benefits } from './components/Benefits';
 import { Projects } from './components/Projects';
+import { BlogPreview } from './components/BlogPreview';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <ImplementationProcess />
       <Benefits />
       <Projects />
+      <BlogPreview />
     </div>
   );
 }

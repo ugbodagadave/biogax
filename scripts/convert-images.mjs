@@ -21,6 +21,14 @@ const conversions = [
     {
         input: 'simone-hutsch-XTyNwgCYWTk-unsplash.jpg',
         output: 'public/project-savannah.webp'
+    },
+    {
+        input: 'declan-sun-nk90n_MEph8-unsplash.jpg',
+        output: 'public/blog-biogas-science.webp'
+    },
+    {
+        input: 'melissa-askew-y4xZxzN754M-unsplash.jpg',
+        output: 'public/blog-biofertilizer.webp'
     }
 ];
 

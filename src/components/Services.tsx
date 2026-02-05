@@ -26,9 +26,9 @@ const services = [
 
 export function Services() {
     return (
-        <section className="bg-white pt-8 md:pt-12 pb-16 md:pb-24 px-4 md:px-8" id="services">
+        <section className="bg-white pt-[var(--spacing-section-pt-mobile)] md:pt-[var(--spacing-section-pt-desktop)] pb-[var(--spacing-section-pb-mobile)] md:pb-[var(--spacing-section-pb-desktop)] px-4 md:px-8" id="services">
             {/* Header */}
-            <div className="max-w-[1400px] mx-auto text-center mb-12 md:mb-16">
+            <div className="max-w-[1400px] mx-auto text-center mb-[var(--spacing-header-mb-mobile)] md:mb-[var(--spacing-header-mb-desktop)]">
                 <span className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#f5f5f0] border border-[#e8e8e0] rounded-full font-body text-[0.7rem] font-semibold tracking-wider text-[#1a1a1a] mb-6">
                     <img
                         src="/what-we-do-icon.svg"

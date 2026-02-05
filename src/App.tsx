@@ -5,6 +5,7 @@ import { WhatWeDo } from './components/WhatWeDo';
 import { Services } from './components/Services';
 import { ImplementationProcess } from './components/ImplementationProcess';
 import { Benefits } from './components/Benefits';
+import { Projects } from './components/Projects';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Services />
       <ImplementationProcess />
       <Benefits />
+      <Projects />
     </div>
   );
 }

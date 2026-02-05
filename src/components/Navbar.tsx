@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ArrowRight, Menu, X } from 'lucide-react';
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
 
 const navLinks = [
     { name: 'Home', href: '#' },
@@ -11,9 +12,28 @@ const navLinks = [
 
 export function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
+    const { scrollY } = useScroll();
+
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        const previous = scrollY.getPrevious() ?? 0;
+        if (latest > previous && latest > 150) {
+            setIsVisible(false);
+        } else {
+            setIsVisible(true);
+        }
+    });
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 py-4 bg-[#1a1a1a]">
+        <motion.nav
+            variants={{
+                visible: { y: 0 },
+                hidden: { y: '-100%' },
+            }}
+            animate={isVisible ? "visible" : "hidden"}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
+            className="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 py-4 liquid-glass"
+        >
             <div className="flex items-center justify-between max-w-[1400px] mx-auto">
                 {/* Logo */}
                 <a href="/" className="flex items-center gap-2 text-white group">
@@ -25,12 +45,12 @@ export function Navbar() {
                 </a>
 
                 {/* Desktop Navigation Links */}
-                <div className="hidden md:flex items-center gap-1">
+                <div className="hidden md:flex items-center gap-x-2">
                     {navLinks.map((link) => (
                         <a
                             key={link.name}
                             href={link.href}
-                            className="relative px-4 py-2 font-body text-sm font-medium text-white rounded-full transition-all duration-200 hover:bg-[#c0ff75] hover:text-[#1a1a1a] "
+                            className="relative px-4 py-2 font-body text-sm font-medium text-white/90 rounded-full transition-all duration-300 hover:bg-[#c0ff75] hover:text-[#1a1a1a]"
                         >
                             {link.name}
                         </a>
@@ -40,15 +60,15 @@ export function Navbar() {
                 {/* Desktop CTA Button */}
                 <a
                     href="#contact"
-                    className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 font-body text-sm font-medium text-[#1a1a1a] bg-[#c0ff75] rounded-full transition-all duration-200 hover:bg-[#d4ff9e] group"
+                    className="hidden md:inline-flex items-center gap-2 px-6 py-2.5 font-body text-sm font-medium text-[#1a1a1a] bg-[#c0ff75] rounded-full transition-all duration-300 hover:bg-[#d4ff9e] shadow-[0_0_15px_rgba(192,255,117,0.2)] group"
                 >
                     Free Energy Assessment
-                    <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
+                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden flex items-center justify-center p-2 text-white transition-colors hover:bg-white/10 rounded-lg"
+                    className="md:hidden flex items-center justify-center p-2 text-white transition-colors hover:bg-white/10 rounded-full border border-white/10 bg-white/5"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     aria-label="Toggle menu"
                 >
@@ -60,29 +80,38 @@ export function Navbar() {
                 </button>
             </div>
 
+
             {/* Mobile Menu */}
-            {isMobileMenuOpen && (
-                <div className="md:hidden absolute top-full left-4 right-4 bg-[#1a1a1a]/95 backdrop-blur-xl rounded-2xl p-4 flex flex-col gap-2 mt-2 border border-white/10 shadow-2xl animate-fade-in">
-                    {navLinks.map((link) => (
+            <AnimatePresence>
+                {isMobileMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        className="md:hidden absolute top-full left-4 right-4 liquid-glass rounded-2xl p-5 flex flex-col gap-3 mt-3 shadow-2xl overflow-hidden"
+                    >
+                        {navLinks.map((link) => (
+                            <a
+                                key={link.name}
+                                href={link.href}
+                                className="px-5 py-3 font-body text-lg font-medium text-white/90 rounded-xl transition-all hover:bg-white/10 hover:pl-7"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                                {link.name}
+                            </a>
+                        ))}
                         <a
-                            key={link.name}
-                            href={link.href}
-                            className="px-4 py-3 font-body text-base font-medium text-white rounded-xl transition-colors hover:bg-white/10"
+                            href="#contact"
+                            className="px-5 py-4 font-body text-lg font-medium text-[#1a1a1a] bg-[#c0ff75] rounded-xl transition-all hover:bg-[#d4ff9e] flex items-center justify-between mt-2 shadow-lg"
                             onClick={() => setIsMobileMenuOpen(false)}
                         >
-                            {link.name}
+                            Free Energy Assessment
+                            <ArrowRight className="w-5 h-5" />
                         </a>
-                    ))}
-                    <a
-                        href="#contact"
-                        className="px-4 py-3 font-body text-base font-medium text-[#1a1a1a] bg-[#c0ff75] rounded-xl transition-colors hover:bg-[#d4ff9e] flex items-center justify-between mt-2"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                        Free Energy Assessment
-                        <ArrowRight className="w-4 h-4" />
-                    </a>
-                </div>
-            )}
-        </nav>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </motion.nav>
     );
 }
+

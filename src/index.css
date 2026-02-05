@@ -43,9 +43,15 @@
     --color-biogax-green-dark: #1a1a1a;
     --color-biogax-green-light: #d4ff9e;
 
-    /* Typography */
-    --font-heading: 'Outfit', system-ui, sans-serif;
-    --font-body: 'Inter', system-ui, sans-serif;
+    /* Spacing Tokens */
+    --spacing-section-pt-desktop: 4rem;
+    --spacing-section-pb-desktop: 1rem;
+    --spacing-section-pt-mobile: 3rem;
+    --spacing-section-pb-mobile: 3rem;
+    --spacing-header-mb-desktop: 4rem;
+    --spacing-header-mb-mobile: 2.5rem;
+    --spacing-list-gap-desktop: 4rem;
+    --spacing-list-gap-mobile: 2.5rem;
 }
 
 :root {
@@ -84,6 +90,15 @@
 
     /* Sticky card spacing - responsive */
     --sticky-card-spacing: 60px;
+
+    /* Semantic Spacing Tokens */
+    --section-py-desktop: 5rem;
+    --section-py-mobile: 3rem;
+    --header-mb-desktop: 4rem;
+    --header-mb-mobile: 2.5rem;
+    --list-gap-desktop: 4rem;
+    --list-gap-mobile: 2.5rem;
+    --item-inner-gap: 1.5rem;
 }
 
 /* Tablet: smaller fixed spacing */
@@ -197,14 +212,18 @@
 }
 
 /* ============================================
-   NAVBAR STYLES
+   UTILITY CLASSES
    ============================================ */
 
+.liquid-glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(28px) saturate(200%);
+    -webkit-backdrop-filter: blur(28px) saturate(200%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
 
-/* ============================================
-   HERO SECTION STYLES
-   ============================================ */
-
-/* ============================================
-   WHAT WE DO SECTION
-   ============================================ */
+.dark .liquid-glass {
+    background: rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}

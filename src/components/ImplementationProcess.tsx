@@ -20,16 +20,16 @@ const steps = [
 
 export function ImplementationProcess() {
     return (
-        <section className="bg-white pb-16 md:pb-24 pt-0 px-4 md:px-8">
+        <section className="bg-white pt-[var(--spacing-section-pt-mobile)] md:pt-[var(--spacing-section-pt-desktop)] pb-[var(--spacing-section-pb-mobile)] md:pb-[var(--spacing-section-pb-desktop)] px-4 md:px-8">
             <div className="max-w-[1400px] mx-auto">
                 {/* Header */}
-                <div className="flex flex-col items-center text-center mb-12 md:mb-16">
+                <div className="flex flex-col items-center text-center mb-[var(--spacing-header-mb-mobile)] md:mb-[var(--spacing-header-mb-desktop)]">
                     <span className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#f5f5f0] border border-[#e8e8e0] rounded-full font-body text-[0.7rem] font-semibold tracking-wider text-[#1a1a1a] mb-6">
                         <img src="/what-we-do-icon.svg" alt="" className="w-4 h-4" />
                         OUR PROCESS
                     </span>
 
-                    <h2 className="font-heading text-[2rem] md:text-[3rem] font-medium leading-[1.1] tracking-tight text-[#1a1a1a] mb-4">
+                    <h2 className="font-heading text-[2rem] md:text-[3rem] font-medium leading-[1.1] tracking-tight text-[#1a1a1a] mb-[var(--item-inner-gap)]">
                         Implementation Process.
                     </h2>
 

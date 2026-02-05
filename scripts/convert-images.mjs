@@ -17,6 +17,10 @@ const conversions = [
     {
         input: 'ricardo-gomez-angel-MagdWoazARo-unsplash.jpg',
         output: 'public/benefit-installation.webp'
+    },
+    {
+        input: 'simone-hutsch-XTyNwgCYWTk-unsplash.jpg',
+        output: 'public/project-savannah.webp'
     }
 ];
 

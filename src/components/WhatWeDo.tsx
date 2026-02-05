@@ -35,9 +35,9 @@ const stickyCards = [
 
 export function WhatWeDo() {
     return (
-        <section className="bg-white pt-16 md:pt-24 pb-8 md:pb-12 px-4 md:px-8" id="what-we-do">
+        <section className="bg-white pt-[var(--spacing-section-pt-mobile)] md:pt-[var(--spacing-section-pt-desktop)] pb-[var(--spacing-section-pb-mobile)] md:pb-[var(--spacing-section-pb-desktop)] px-4 md:px-8" id="what-we-do">
             {/* Text Content */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 max-w-[1400px] mx-auto mb-12 md:mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 max-w-[1400px] mx-auto mb-[var(--spacing-header-mb-mobile)] md:mb-[var(--spacing-header-mb-desktop)]">
                 {/* Left Column */}
                 <div className="flex flex-col items-start">
                     <span className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#f5f5f0] border border-[#e8e8e0] rounded-full font-body text-[0.7rem] font-semibold tracking-wider text-[#1a1a1a] mb-6">

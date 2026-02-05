@@ -95,7 +95,7 @@ export function Hero() {
             <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/30 via-black/40 to-black/50" />
 
             {/* Content */}
-            <div className="flex flex-col items-center text-center pt-32 pb-16 px-6 max-w-[900px] mx-auto">
+            <div className="flex flex-col items-center text-center pt-[var(--spacing-section-pt-desktop)] pb-[var(--spacing-section-pb-desktop)] px-6 max-w-[900px] mx-auto max-md:pt-[var(--spacing-section-pt-mobile)] max-md:pb-[var(--spacing-section-pb-mobile)]">
                 {/* Badge */}
                 <span className="inline-flex items-center px-4 py-1.5 font-medium text-xs text-[#1a1a1a] bg-gradient-to-br from-white/60 via-white/30 to-white/45 backdrop-blur-xl border border-white/30 rounded-full mb-6 shadow-[0_4px_16px_rgba(0,0,0,0.1)] animate-fade-in">
                     Farm-Powered Energy

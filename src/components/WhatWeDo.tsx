@@ -97,7 +97,7 @@ export function WhatWeDo() {
                     {stickyCards.map((card, index) => (
                         <div
                             key={card.title}
-                            className="sticky w-full h-[350px] md:h-[500px] lg:h-[600px] rounded-none overflow-hidden shadow-[0_-4px_24px_rgba(0,0,0,0.15)] first:shadow-none"
+                            className="sticky w-full h-[350px] md:h-[500px] lg:h-[600px] rounded-[4px] overflow-hidden shadow-[0_-4px_24px_rgba(0,0,0,0.15)] first:shadow-none"
                             style={{
                                 top: `${16 + index * 20}px`,
                                 zIndex: index + 1,

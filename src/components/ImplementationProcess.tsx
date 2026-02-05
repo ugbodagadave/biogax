@@ -44,7 +44,7 @@ export function ImplementationProcess() {
                     {steps.map((step, index) => (
                         <div
                             key={index}
-                            className="relative bg-[#032b16] rounded-none p-8 md:p-10 flex flex-col items-start min-h-[250px] overflow-hidden group hover:shadow-lg transition-shadow duration-300"
+                            className="relative bg-[#032b16] rounded-[4px] p-8 md:p-10 flex flex-col items-start min-h-[250px] overflow-hidden group hover:shadow-lg transition-shadow duration-300"
                         >
                             {/* Top Left Icon */}
                             <div className="relative z-10 w-10 h-10 mb-auto">

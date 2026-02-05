@@ -63,7 +63,7 @@ export function Services() {
                     {services.map((service, index) => (
                         <div
                             key={service.title}
-                            className="sticky w-full h-[450px] md:h-[500px] lg:h-[550px] rounded-none overflow-hidden shadow-[0_-8px_30px_rgba(0,0,0,0.2)] first:shadow-none"
+                            className="sticky w-full h-[450px] md:h-[500px] lg:h-[550px] rounded-[4px] overflow-hidden shadow-[0_-8px_30px_rgba(0,0,0,0.2)] first:shadow-none"
                             style={{
                                 top: `${24 + index * 24}px`,
                                 zIndex: index + 1,

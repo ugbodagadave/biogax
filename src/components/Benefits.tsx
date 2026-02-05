@@ -138,7 +138,7 @@ export function Benefits() {
                             </div>
 
                             {/* Right Column: Image */}
-                            <div className="relative rounded-none overflow-hidden aspect-[16/8] md:aspect-[16/9]">
+                            <div className="relative rounded-[4px] overflow-hidden aspect-[16/8] md:aspect-[16/9]">
                                 <img
                                     src={benefit.image}
                                     alt={benefit.title}

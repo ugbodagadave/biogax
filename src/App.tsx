@@ -7,6 +7,7 @@ import { ImplementationProcess } from './components/ImplementationProcess';
 import { Benefits } from './components/Benefits';
 import { Projects } from './components/Projects';
 import { BlogPreview } from './components/BlogPreview';
+import { Footer } from './components/Footer';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Benefits />
       <Projects />
       <BlogPreview />
+      <Footer />
     </div>
   );
 }

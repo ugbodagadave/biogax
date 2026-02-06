@@ -53,19 +53,21 @@ export function BlogsPage() {
                         {filteredBlogs.map((blog) => (
                             <article key={blog.id} className="flex flex-col group">
                                 {/* Image */}
-                                <div className="relative w-full aspect-[16/10] rounded-[4px] overflow-hidden mb-6">
+                                <Link to={`/blogs/${blog.slug}`} className="relative w-full aspect-[16/10] rounded-[4px] overflow-hidden mb-6 block">
                                     <img
                                         src={blog.image}
                                         alt={blog.title}
                                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                     />
-                                </div>
+                                </Link>
 
                                 {/* Content */}
                                 <div className="flex flex-col flex-1">
-                                    <h3 className="font-heading text-xl md:text-2xl font-medium text-[#1a1a1a] mb-3">
-                                        {blog.title}
-                                    </h3>
+                                    <Link to={`/blogs/${blog.slug}`}>
+                                        <h3 className="font-heading text-xl md:text-2xl font-medium text-[#1a1a1a] mb-3 hover:text-[#06402b] transition-colors">
+                                            {blog.title}
+                                        </h3>
+                                    </Link>
                                     <p className="font-body text-[#555555] leading-relaxed mb-4 line-clamp-2">
                                         {blog.description}
                                     </p>

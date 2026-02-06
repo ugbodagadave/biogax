@@ -33,3 +33,4 @@ dist-ssr
 .agent\skills\skills.json
 .agent\skills
 .agent/
+.vercel

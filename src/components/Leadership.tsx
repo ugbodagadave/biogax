@@ -165,9 +165,29 @@ export function Leadership() {
                             <h3 className="font-heading text-lg md:text-xl font-medium text-[#1a1a1a] mb-1">
                                 {member.name}
                             </h3>
-                            <p className="font-body text-sm text-[#555555]">
+                            <p className="font-body text-sm text-[#555555] mb-3 md:mb-0">
                                 {member.role}
                             </p>
+
+                            {/* Mobile Social Icons (always visible on mobile) */}
+                            <div className="flex items-center gap-3 md:hidden">
+                                {member.hasTwitter && (
+                                    <a
+                                        href="#"
+                                        className="text-[#555555] hover:text-[#1a1a1a] transition-colors"
+                                        aria-label={`Follow ${member.name} on X`}
+                                    >
+                                        <XIcon className="w-5 h-5" />
+                                    </a>
+                                )}
+                                <a
+                                    href="#"
+                                    className="text-[#555555] hover:text-[#1a1a1a] transition-colors"
+                                    aria-label={`Connect with ${member.name} on LinkedIn`}
+                                >
+                                    <LinkedInIcon className="w-5 h-5" />
+                                </a>
+                            </div>
                         </div>
                     ))}
                 </div>

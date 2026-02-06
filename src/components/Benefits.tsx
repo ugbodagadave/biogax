@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
@@ -150,13 +151,13 @@ export function Benefits() {
 
                     {/* CTA at the end */}
                     <div className="pl-16 mt-8">
-                        <a
-                            href="#contact"
+                        <Link
+                            to="/assessment"
                             className="inline-flex items-center gap-2 px-6 py-3 font-body text-sm font-medium text-[#1a1a1a] bg-[#c0ff75] border-2 border-[#c0ff75] rounded-full hover:bg-[#d4ff9e] transition-colors group"
                         >
                             Free Energy Assessment
                             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

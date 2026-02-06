@@ -1,39 +1,7 @@
-import { ArrowRight, Zap, Droplets, Leaf, Wrench, BarChart3, Shield } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ServicesHero } from '../components/ServicesHero';
-
-const services = [
-    {
-        icon: Zap,
-        title: 'Biogas Plant Design',
-        description: 'Custom-designed biogas systems tailored to your farm\'s specific waste output and energy needs.',
-    },
-    {
-        icon: Wrench,
-        title: 'Installation & Setup',
-        description: 'Professional installation by our certified technicians, ensuring optimal performance from day one.',
-    },
-    {
-        icon: BarChart3,
-        title: 'Energy Consulting',
-        description: 'Comprehensive energy audits and feasibility studies to maximize your ROI.',
-    },
-    {
-        icon: Droplets,
-        title: 'Waste Management',
-        description: 'End-to-end organic waste processing solutions that turn liability into asset.',
-    },
-    {
-        icon: Leaf,
-        title: 'Biofertilizer Production',
-        description: 'Convert digestate into valuable organic fertilizer for improved soil health and crop yields.',
-    },
-    {
-        icon: Shield,
-        title: 'Maintenance & Support',
-        description: 'Ongoing maintenance programs and 24/7 support to keep your system running efficiently.',
-    },
-];
+import { ServicesSolutions } from '../components/ServicesSolutions';
 
 export function ServicesPage() {
     return (
@@ -41,32 +9,8 @@ export function ServicesPage() {
             {/* Hero Section */}
             <ServicesHero />
 
-            {/* Services Grid */}
-            <section className="pt-[var(--spacing-section-pt-mobile)] md:pt-[var(--spacing-section-pt-desktop)] pb-[var(--spacing-section-pb-mobile)] md:pb-[var(--spacing-section-pb-desktop)] px-4 md:px-8 bg-white">
-                <div className="max-w-[1400px] mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                        {services.map((service) => {
-                            const Icon = service.icon;
-                            return (
-                                <div
-                                    key={service.title}
-                                    className="flex flex-col p-8 bg-[#f5f5f0] rounded-[4px] hover:shadow-lg transition-shadow"
-                                >
-                                    <div className="w-14 h-14 flex items-center justify-center bg-[#c0ff75] rounded-full mb-6">
-                                        <Icon className="w-7 h-7 text-[#1a1a1a]" />
-                                    </div>
-                                    <h3 className="font-heading text-xl font-medium text-[#1a1a1a] mb-4">
-                                        {service.title}
-                                    </h3>
-                                    <p className="font-body text-[#555555] leading-relaxed">
-                                        {service.description}
-                                    </p>
-                                </div>
-                            );
-                        })}
-                    </div>
-                </div>
-            </section>
+            {/* Solutions Section */}
+            <ServicesSolutions />
 
             {/* Process Section */}
             <section className="pt-[var(--spacing-section-pt-mobile)] md:pt-[var(--spacing-section-pt-desktop)] pb-[var(--spacing-section-pb-mobile)] md:pb-[var(--spacing-section-pb-desktop)] px-4 md:px-8 bg-[#f5f5f0]">

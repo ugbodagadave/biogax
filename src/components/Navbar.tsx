@@ -41,7 +41,7 @@ export function Navbar() {
             }}
             animate={isVisible ? "visible" : "hidden"}
             transition={{ duration: 0.35, ease: "easeInOut" }}
-            className="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 py-4 liquid-glass"
+            className="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 py-4 bg-[#06402b]"
         >
             <div className="flex items-center justify-between max-w-[1400px] mx-auto">
                 {/* Logo */}
@@ -100,7 +100,7 @@ export function Navbar() {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
-                        className="md:hidden absolute top-full left-4 right-4 liquid-glass rounded-2xl p-5 flex flex-col gap-3 mt-3 shadow-2xl overflow-hidden"
+                        className="md:hidden absolute top-full left-4 right-4 bg-[#06402b] rounded-2xl p-5 flex flex-col gap-3 mt-3 shadow-2xl overflow-hidden"
                     >
                         {navLinks.map((link) => (
                             <Link

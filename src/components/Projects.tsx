@@ -1,10 +1,12 @@
-import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const projects = [
     {
         id: 1,
+        slug: 'savannah-agro-processing',
         title: 'Savannah Agro-Processing Biogas Retrofit',
         description: 'We designed and installed a 60m³ anaerobic digester that now powers the entire milking and cold storage system.',
         image: '/project-savannah.webp',
@@ -17,6 +19,7 @@ const projects = [
     },
     {
         id: 2,
+        slug: 'greenfield-dairy-farm',
         title: 'Savannah Agro-Processing Biogas Retrofit',
         description: 'We designed and installed a 60m³ anaerobic digester that now powers the entire milking and cold storage system.',
         image: '/project-savannah.webp',
@@ -29,6 +32,7 @@ const projects = [
     },
     {
         id: 3,
+        slug: 'sunrise-poultry',
         title: 'Savannah Agro-Processing Biogas Retrofit',
         description: 'We designed and installed a 60m³ anaerobic digester that now powers the entire milking and cold storage system.',
         image: '/project-savannah.webp',
@@ -125,10 +129,13 @@ function ProjectCard({ project, index }: { project: typeof projects[0], index: n
 
                 {/* Button */}
                 <div className="mt-1">
-                    <button className="inline-flex items-center justify-center gap-2 px-6 py-3 font-medium text-sm text-[#1a1a1a] bg-[#c0ff75] rounded-full hover:bg-[#d4ff9e] transition-colors group cursor-pointer">
+                    <Link
+                        to={`/projects/${project.slug}`}
+                        className="inline-flex items-center justify-center gap-2 px-6 py-3 font-medium text-sm text-[#1a1a1a] bg-[#c0ff75] rounded-full hover:bg-[#d4ff9e] transition-colors group cursor-pointer"
+                    >
                         View Details
                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                    </button>
+                    </Link>
                 </div>
             </div>
         </motion.div>
@@ -157,13 +164,13 @@ export function Projects() {
                     </div>
 
                     {/* View All Button */}
-                    <a
-                        href="/projects"
+                    <Link
+                        to="/projects"
                         className="inline-flex items-center justify-center gap-2 px-6 py-3 font-medium text-sm text-[#1a1a1a] bg-[#c0ff75] rounded-full hover:bg-[#d4ff9e] transition-colors group whitespace-nowrap"
                     >
                         View all projects
                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Projects List */}

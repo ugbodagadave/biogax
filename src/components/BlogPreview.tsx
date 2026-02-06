@@ -1,8 +1,10 @@
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const blogs = [
     {
         id: 1,
+        slug: 'science-behind-biogas',
         image: '/blog-biogas-science.webp',
         title: 'The Science Behind Biogas',
         description: 'A breakdown of the anaerobic digestion process and why it works so well...',
@@ -11,6 +13,7 @@ const blogs = [
     },
     {
         id: 2,
+        slug: 'biofertilizer-soil-health',
         image: '/blog-biofertilizer.webp',
         title: 'How Biofertilizer Can Restore Soil Health Naturally',
         description: 'Chemical fertilizers degrade the soil. Learn how biogas byproducts offer a...',
@@ -40,10 +43,10 @@ export function BlogPreview() {
                         </h2>
                     </div>
 
-                    <a href="/blog" className="inline-flex items-center gap-2 px-5 py-2.5 font-body text-[0.875rem] font-medium text-[#1a1a1a] bg-[#c0ff75] border-2 border-[#c0ff75] rounded-full hover:bg-[#d4ff9e] transition-colors group self-start md:self-end">
+                    <Link to="/blogs" className="inline-flex items-center gap-2 px-5 py-2.5 font-body text-[0.875rem] font-medium text-[#1a1a1a] bg-[#c0ff75] border-2 border-[#c0ff75] rounded-full hover:bg-[#d4ff9e] transition-colors group self-start md:self-end">
                         View all posts
                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Blog Grid */}
@@ -75,10 +78,10 @@ export function BlogPreview() {
                                     <span>{blog.date}</span>
                                 </div>
 
-                                <a href={`/blog/${blog.id}`} className="inline-flex items-center gap-2 px-5 py-2 font-body text-[0.875rem] font-medium text-[#1a1a1a] bg-transparent border border-[#e0e0e0] rounded-full hover:border-[#1a1a1a] transition-colors group/btn mt-auto">
+                                <Link to={`/blogs/${blog.slug}`} className="inline-flex items-center gap-2 px-5 py-2 font-body text-[0.875rem] font-medium text-[#1a1a1a] bg-transparent border border-[#e0e0e0] rounded-full hover:border-[#1a1a1a] transition-colors group/btn mt-auto">
                                     Read blog
                                     <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1 text-[#888888] group-hover/btn:text-[#1a1a1a]" />
-                                </a>
+                                </Link>
                             </div>
                         </article>
                     ))}

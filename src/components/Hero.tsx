@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Check } from 'lucide-react';
 
 const benefits = [
@@ -116,10 +117,10 @@ export function Hero() {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-wrap items-center justify-center gap-4 mb-10 animate-fade-in-delay-2 w-full max-w-[300px] md:max-w-none flex-col md:flex-row">
-                    <a href="#contact" className="inline-flex items-center justify-center gap-2 px-6 py-3 font-medium text-sm text-[#1a1a1a] bg-[#c0ff75] border-2 border-[#c0ff75] rounded-full hover:bg-[#d4ff9e] hover:border-[#d4ff9e] transition-all group w-full md:w-auto">
+                    <Link to="/assessment" className="inline-flex items-center justify-center gap-2 px-6 py-3 font-medium text-sm text-[#1a1a1a] bg-[#c0ff75] border-2 border-[#c0ff75] rounded-full hover:bg-[#d4ff9e] hover:border-[#d4ff9e] transition-all group w-full md:w-auto">
                         Free Energy Assessment
                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                    </a>
+                    </Link>
                     <a href="#how-it-works" className="inline-flex items-center justify-center gap-2 px-6 py-3 font-medium text-sm text-white bg-transparent border-2 border-white rounded-full hover:bg-white/10 transition-all group w-full md:w-auto">
                         See How It Works
                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

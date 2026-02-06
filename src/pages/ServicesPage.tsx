@@ -1,5 +1,6 @@
 import { ArrowRight, Zap, Droplets, Leaf, Wrench, BarChart3, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { ServicesHero } from '../components/ServicesHero';
 
 const services = [
     {
@@ -38,28 +39,7 @@ export function ServicesPage() {
     return (
         <>
             {/* Hero Section */}
-            <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 bg-[#06402b] overflow-hidden">
-                <div className="max-w-[1400px] mx-auto px-4 md:px-8">
-                    <div className="max-w-[800px]">
-                        {/* Badge */}
-                        <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 border border-white/20 rounded-full font-body text-xs font-medium tracking-wider text-white mb-6">
-                            <img src="/what-we-do-icon.svg" alt="" className="w-4 h-4 invert" />
-                            OUR SERVICES
-                        </span>
-
-                        {/* Headline */}
-                        <h1 className="font-heading text-4xl md:text-6xl font-medium text-white leading-[1.1] mb-6">
-                            Complete Biogas Solutions for Modern Agriculture
-                        </h1>
-
-                        {/* Description */}
-                        <p className="font-body text-lg text-white/80 leading-relaxed max-w-[600px]">
-                            From initial assessment to ongoing maintenance, we provide comprehensive services
-                            to help you harness the power of biogas energy.
-                        </p>
-                    </div>
-                </div>
-            </section>
+            <ServicesHero />
 
             {/* Services Grid */}
             <section className="pt-[var(--spacing-section-pt-mobile)] md:pt-[var(--spacing-section-pt-desktop)] pb-[var(--spacing-section-pb-mobile)] md:pb-[var(--spacing-section-pb-desktop)] px-4 md:px-8 bg-white">

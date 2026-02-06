@@ -29,6 +29,10 @@ const conversions = [
     {
         input: 'melissa-askew-y4xZxzN754M-unsplash.jpg',
         output: 'public/blog-biofertilizer.webp'
+    },
+    {
+        input: 'jason-mavrommatis-kufsOr1-F-s-unsplash.jpg',
+        output: 'public/services-hero.webp'
     }
 ];
 

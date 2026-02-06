@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const solutions = [
     {
@@ -41,9 +42,17 @@ export function ServicesSolutions() {
 
                 {/* Solutions List */}
                 <div className="flex flex-col gap-12 md:gap-16">
-                    {solutions.map((solution) => (
-                        <div
+                    {solutions.map((solution, index) => (
+                        <motion.div
                             key={solution.title}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: '-50px' }}
+                            transition={{
+                                duration: 4.0,
+                                delay: index * 0.2,
+                                ease: [0.25, 0.1, 0.25, 1],
+                            }}
                             className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 items-start"
                         >
                             {/* Left Column - Title & Description */}
@@ -90,10 +99,11 @@ export function ServicesSolutions() {
                                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                                 </Link>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
         </section>
     );
 }
+

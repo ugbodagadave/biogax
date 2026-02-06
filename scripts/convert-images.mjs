@@ -37,6 +37,31 @@ const conversions = [
     {
         input: 'ari-shojaei-9ZsTW8KH5CE-unsplash.jpg',
         output: 'public/projects-hero.webp'
+    },
+    // New blog images
+    {
+        input: 'blogimages/auroom-wellness-50wtGumkZIA-unsplash.jpg',
+        output: 'public/blog-wellness.webp'
+    },
+    {
+        input: 'blogimages/mathias-reding-4fVFi0ZLUIQ-unsplash.jpg',
+        output: 'public/blog-farm-equipment.webp'
+    },
+    {
+        input: 'blogimages/melissa-laun-wZ7DKdf1Hsk-unsplash.jpg',
+        output: 'public/blog-solar-panels.webp'
+    },
+    {
+        input: 'blogimages/michal-jagodzinski-dy1TzH9Sujs-unsplash.jpg',
+        output: 'public/blog-biogas-plant.webp'
+    },
+    {
+        input: 'blogimages/sergei-wing-fFRtvdWqyLk-unsplash.jpg',
+        output: 'public/blog-green-field.webp'
+    },
+    {
+        input: 'blogimages/zoe-richardson-m1eKjNDaf-4-unsplash.jpg',
+        output: 'public/blog-crop-field.webp'
     }
 ];
 

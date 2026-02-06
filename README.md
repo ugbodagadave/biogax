@@ -1,73 +1,104 @@
-# React + TypeScript + Vite
+# Biogax - Sustainable Biogas Energy for Modern Agriculture
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Biogax is a premium, high-performance landing page and platform designed for an environmental energy company. It specializes in converting organic waste into clean, sustainable biogas energy for farms, helping them reduce costs and environmental impact.
 
-Currently, two official plugins are available:
+![Biogax Preview](https://biogax.vercel.app/hero-bg.webp)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## React Compiler
+Check out the live site: [biogax.vercel.app](https://biogax.vercel.app)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Modern Responsive Design**: A mobile-first, premium aesthetic using liquid glass effects and a nature-inspired color palette.
+- **Infinite Project Marquee**: A seamless, auto-scrolling gallery of project implementation images powered by Framer Motion.
+- **Dynamic Content**: Centralized data layer for Projects, Blog Posts, and Leadership profiles.
+- **Interactive Assessment Form**: A focused, single-column energy assessment form for lead generation.
+- **Optimized User Experience**:
+    - **Scroll Restoration**: Automatically scrolls to top on page navigation.
+    - **Dynamic Tab Titles**: Browser tab titles update based on the current page.
+    - **Smooth Animations**: Micro-interactions and entry animations using Framer Motion.
+- **SEO Ready**: Semantic HTML, descriptive meta titles, and optimized performance.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Framework**: [React](https://reactjs.org/) (with [Vite](https://vitejs.dev/))
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Routing**: [React Router](https://reactrouter.com/)
+- **Build Tool**: [Bun](https://bun.sh/)
+- **Deployment**: [Vercel](https://vercel.com/)
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+├── components/      # Reusable UI components (Hero, Navbar, Footer, etc.)
+│   ├── ui/          # Low-level UI primitives (buttons, inputs)
+│   └── layout/      # Layout wrappers
+├── data/            # Static data stores (projects.ts, blogs.ts, authors.ts)
+├── hooks/           # Custom React hooks (usePageTitle)
+├── pages/           # Main route components (HomePage, ProjectsPage, etc.)
+├── assets/          # Global styles and public assets
+└── main.tsx         # Application entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Development
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
+
+- [Bun](https://bun.sh/) installed on your system.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ugbodagadave/biogax.git
+   cd biogax
+   ```
+
+2. Install dependencies:
+   ```bash
+   bun install
+   ```
+
+3. Start the development server:
+   ```bash
+   bun run dev
+   ```
+
+### Building for Production
+
+To create a production build:
+```bash
+bun run build
 ```
+
+---
+
+## 🔧 Vercel Deployment
+
+The project is configured for seamless deployment on Vercel.
+
+1. Ensure the Vercel CLI is installed: `bun add -g vercel`
+2. Run the deployment command:
+   ```bash
+   vercel --prod
+   ```
+*Note: The `vercel.json` file handles SPA routing (rewrites) to prevent 404 errors on direct navigation.*
+
+---
+
+## 📄 License
+
+Copyright © 2026 Biogax Energy Solutions. All rights reserved.

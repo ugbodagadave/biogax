@@ -33,6 +33,10 @@ const conversions = [
     {
         input: 'jason-mavrommatis-kufsOr1-F-s-unsplash.jpg',
         output: 'public/services-hero.webp'
+    },
+    {
+        input: 'ari-shojaei-9ZsTW8KH5CE-unsplash.jpg',
+        output: 'public/projects-hero.webp'
     }
 ];
 

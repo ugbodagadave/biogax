@@ -60,8 +60,8 @@ export function Navbar() {
                             key={link.name}
                             to={link.href}
                             className={`relative px-4 py-2 font-body text-sm font-medium rounded-full transition-all duration-300 ${isActiveLink(link.href)
-                                    ? 'bg-[#c0ff75] text-[#1a1a1a]'
-                                    : 'text-white/90 hover:bg-[#c0ff75] hover:text-[#1a1a1a]'
+                                ? 'bg-[#c0ff75] text-[#1a1a1a]'
+                                : 'text-white/90 hover:bg-[#c0ff75] hover:text-[#1a1a1a]'
                                 }`}
                         >
                             {link.name}
@@ -107,8 +107,8 @@ export function Navbar() {
                                 key={link.name}
                                 to={link.href}
                                 className={`px-5 py-3 font-body text-lg font-medium rounded-xl transition-all hover:bg-white/10 hover:pl-7 ${isActiveLink(link.href)
-                                        ? 'bg-white/10 text-white'
-                                        : 'text-white/90'
+                                    ? 'bg-white/10 text-white'
+                                    : 'text-white/90'
                                     }`}
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >

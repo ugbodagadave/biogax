@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import { MainLayout } from './components/layout/MainLayout';
+import { usePageTitle } from './hooks/usePageTitle';
 
 // Pages
 import { HomePage } from './pages/HomePage';
@@ -15,6 +16,8 @@ import { NotFoundPage } from './pages/NotFoundPage';
 import { ScrollToTop } from './components/ScrollToTop';
 
 function App() {
+  usePageTitle();
+
   return (
     <>
       <ScrollToTop />

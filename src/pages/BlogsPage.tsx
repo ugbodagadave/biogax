@@ -1,36 +1,9 @@
 import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { blogsData } from '../data/blogs';
 
 const categories = ['All Blog', 'Clean Energy', 'Farming Tips', 'Case Studies', 'Soil Health'];
-
-// Blogs data
-export const blogsData = [
-    {
-        id: 1,
-        slug: 'science-behind-biogas',
-        image: '/blog-biogas-science.webp',
-        title: 'The Science Behind Biogas',
-        description: 'A breakdown of the anaerobic digestion process and why it works so we...',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
-        category: 'General',
-        date: 'Jan 28, 2025',
-        author: 'Biogax Team',
-        readTime: '5 min read',
-    },
-    {
-        id: 2,
-        slug: 'biofertilizer-soil-health',
-        image: '/blog-biofertilizer.webp',
-        title: 'How Biofertilizer Can Restore Soil Health Naturally',
-        description: 'Chemical fertilizers degrade the soil. Learn how biogas byproducts offer a...',
-        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...',
-        category: 'Clean Energy',
-        date: 'Jan 28, 2025',
-        author: 'Biogax Team',
-        readTime: '7 min read',
-    },
-];
 
 export function BlogsPage() {
     const [activeCategory, setActiveCategory] = useState('All Blog');
@@ -62,8 +35,8 @@ export function BlogsPage() {
                                 key={category}
                                 onClick={() => setActiveCategory(category)}
                                 className={`font-body text-sm whitespace-nowrap pb-2 border-b-2 transition-colors ${activeCategory === category
-                                        ? 'text-[#1a1a1a] border-[#1a1a1a] font-medium'
-                                        : 'text-[#888888] border-transparent hover:text-[#1a1a1a]'
+                                    ? 'text-[#1a1a1a] border-[#1a1a1a] font-medium'
+                                    : 'text-[#888888] border-transparent hover:text-[#1a1a1a]'
                                     }`}
                             >
                                 {category}

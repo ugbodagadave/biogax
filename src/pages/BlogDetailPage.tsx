@@ -1,6 +1,6 @@
 import { ArrowRight, ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
-import { blogsData } from './BlogsPage';
+import { blogsData } from '../data/blogs';
 
 export function BlogDetailPage() {
     const { slug } = useParams<{ slug: string }>();
